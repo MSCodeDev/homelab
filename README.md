@@ -1,6 +1,6 @@
 # Vault Homelab
 
-This repository contains the [Docker Compose](https://docs.docker.com/compose/) configuration files for **Vault**, a self-hosted homelab environment managed with containerized services. The setup is designed for reliability and flexibility, leveraging [Komodo](https://github.com/moghtech/komodo) for container management and [Backrest](https://github.com/garethgeorge/backrest) for backups.
+This repository contains the [Docker Compose](https://docs.docker.com/compose/) configuration files for **Vault**, a self-hosted homelab environment managed with containerized services. The setup is designed for reliability and flexibility, leveraging [Komodo](https://github.com/moghtech/komodo) for container management.
 
 This setup allows for centralized management of media, monitoring, backups, and productivity tools for home use.
 
