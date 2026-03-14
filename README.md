@@ -23,20 +23,6 @@ This setup allows for centralized management of media, monitoring, backups, and 
 ---
 
 
-### 📦 Core Services
-
-Although I am constantly testing out new containers and services, below are the core services I will likely always be running:
-
-- **[Backrest](https://github.com/garethgeorge/backrest)**: Backup management
-- **[Homepage](https://github.com/gethomepage/homepage)**: Customizable dashboard
-- **[Plex](https://plex.tv/)**: Media server for streaming
-- **[QBittorrent](https://github.com/VueTorrent/VueTorrent)**: Download client
-- **[Vaultwarden](https://github.com/dani-garcia/vaultwarden)**: Password manager
-
----
-
-
-
 ### 📜 License
 
 The Vault Homelab is provided under the MIT license.
