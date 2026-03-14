@@ -1,0 +1,13 @@
+version: "3"
+services:
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared
+    restart: unless-stopped
+    read_only: true
+    volumes:
+      - ./config:/root/.cloudflared/
+    env_file:
+      - .env
+    command: tunnel --protocol http2 --no-autoupdate run --token ${TUNNEL_TOKEN}
+    user: root

@@ -1,0 +1,17 @@
+services:
+  fileflows:
+    image: revenz/fileflows
+    restart: unless-stopped
+    ports:
+      - "19200:5000"
+    devices:
+      - "/dev/dri:/dev/dri"
+    env_file:
+      - .env
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./tmp:/temp
+      - ./data:/app/Data
+      - ./logs:/app/Logs
+      - ./common:/app/common
+      - /vault:/vault

@@ -1,0 +1,9 @@
+services:
+  spinestack:
+    image: ghcr.io/mscodedev/spine-stack:latest
+    container_name: spinestack
+    ports:
+      - '25565:8080'
+    volumes:
+      - ./data:/root/.spinestack
+    restart: unless-stopped

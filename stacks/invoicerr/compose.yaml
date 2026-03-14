@@ -1,0 +1,18 @@
+services:
+  invoicerr:
+    image: ghcr.io/invoicerr-app/invoicerr:latest
+    restart: unless-stopped
+    ports:
+      - "8891:80"
+    env_file:
+      - .env
+    depends_on:
+      - invoicerr_db
+
+  invoicerr_db:
+    image: postgres:15
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./data:/var/lib/postgresql/data

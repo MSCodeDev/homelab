@@ -1,0 +1,12 @@
+services:
+  medialyze:
+    image: ghcr.io/frederikemmer/medialyze:latest
+    container_name: medialyze
+    restart: unless-stopped
+    ports:
+      - 8189:8080
+    env_file:
+      - .env
+    volumes:
+      - ./config:/config
+      - /vault:/media:ro

@@ -1,0 +1,18 @@
+services:
+  nextexplorer:
+    image: nxzai/explorer:latest
+    container_name: nextexplorer
+    restart: unless-stopped
+    ports:
+      - "3232:3000"
+    env_file:
+      - .env
+    volumes:
+      - ./config:/config
+      - ./cache:/cache
+      - /vault/colossus/Documents:/mnt/Documents
+      - /vault/colossus/Pictures:/mnt/Pictures
+      - /vault/colossus/Videos:/mnt/Videos
+      - /vault/colossus/Photos:/mnt/Photos
+      - /vault/downloads:/mnt/Downloads
+      - /vault/colossus/Projects:/mnt/Projects

@@ -1,0 +1,13 @@
+services:
+    speedtest-tracker:
+        image: lscr.io/linuxserver/speedtest-tracker:latest
+        restart: unless-stopped
+        container_name: speedtest-tracker
+        env_file:
+            - .env
+        ports:
+            - 8980:80
+            - 8943:443
+        volumes:
+            - ./data:/config
+            - ./keys:/config/keys

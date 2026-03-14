@@ -1,0 +1,6 @@
+# Ignore containerd runtimes and all komodo and stacks subdirectories
+containerd
+komodo/*
+stacks/*/*
+!komodo/mongo.compose.yaml
+!stacks/*/compose.yaml

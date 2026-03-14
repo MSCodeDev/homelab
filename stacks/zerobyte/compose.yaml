@@ -1,0 +1,18 @@
+services:
+  zerobyte:
+    image: ghcr.io/nicotsx/zerobyte:latest
+    container_name: zerobyte
+    restart: unless-stopped
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - "4096:4096"
+    devices:
+      - /dev/fuse:/dev/fuse
+    env_file:
+      - .env
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./data:/var/lib/zerobyte
+      - /vault/colossus:/source/colossus
+      - /opt/stacks:/source/stacks

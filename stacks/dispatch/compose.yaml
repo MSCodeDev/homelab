@@ -1,0 +1,10 @@
+services:
+  dispatch:
+    image: ghcr.io/mscodedev/dispatch:latest
+    restart: unless-stopped
+    ports:
+      - "3890:3000"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data

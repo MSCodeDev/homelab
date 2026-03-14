@@ -1,0 +1,17 @@
+services:
+  plex:
+    image: lscr.io/linuxserver/plex:latest
+    container_name: plex
+    network_mode: bridge
+    env_file:
+      - .env
+    devices:
+      - /dev/dri:/dev/dri
+    ports:
+      - 32400:32400
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./config:/config
+      - /vault:/vault
+    restart: unless-stopped
+networks: {}

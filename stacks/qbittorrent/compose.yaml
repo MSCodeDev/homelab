@@ -1,0 +1,16 @@
+services:
+  qbit:
+    image: linuxserver/qbittorrent:latest
+    container_name: qbit
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./config:/config
+      - /vault/downloads:/vault/downloads
+    ports:
+      - 8080:8080
+      - 6881:6881
+      - 6881:6881/udp
+networks: {}
